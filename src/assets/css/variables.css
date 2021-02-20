@@ -1,0 +1,24 @@
+:root {
+  --primaryOne: #22A8FF;
+  --primaryTwo: #1F2138;
+  --primaryThree: #089eff;
+
+  --neutralOne: #000000;
+  --neutralTwo: #828282;
+  --neutralThree: #c9c8c8;
+  --neutralFour: #f2efef;
+  --neutralFive: #f6f6f6;
+  --neutralSix: #fff;
+
+  --accentOne: #c7ffd8;
+  --accentTwo: #98ded9;
+  --accentThree: #161d6f;
+
+  --semanticOne: #ffffff;
+  --semanticTwo: #fafdff;
+  --semanticThree: #f6f6f6;
+  --semanticFour: #f2f2f2;
+  --semanticFive: #e6f5ff;
+
+  --primary-gradient: linear-gradient(116.44deg, #0018b6, #3a8df1, #27ccc3);
+}
