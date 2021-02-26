@@ -1,10 +1,14 @@
 :root {
-  --primaryOne: #22A8FF;
-  --primaryTwo: #1F2138;
+  --primaryOne: #1F2138;
+  --primaryTwo: #76788E;
   --primaryThree: #089eff;
+  --primaryFour:  #1281CA;
+  --primaryFive: #ECECF2;
+  
+  --typeOne: #22A8FF;
 
   --neutralOne: #000000;
-  --neutralTwo: #828282;
+  --neutralTwo: #0B0B0B;
   --neutralThree: #c9c8c8;
   --neutralFour: #f2efef;
   --neutralFive: #f6f6f6;

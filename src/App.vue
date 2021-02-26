@@ -1,22 +1,22 @@
 <template>
   <div id="app">
     <homepage />
-    <way-of-business />
-    <el-footer />
+    <!-- <way-of-business />
+    <el-footer /> -->
   </div>
 </template>
 
 <script>
-import ElFooter from './components/ElFooter';
+// import ElFooter from './components/ElFooter';
 import Homepage from './pages/Homepage';
-import WayOfBusiness from './pages/WayOfBusiness';
+// import WayOfBusiness from './pages/WayOfBusiness';
 
 export default {
   name: 'App',
   components: {
     Homepage,
-    WayOfBusiness,
-    ElFooter,
+    // WayOfBusiness,
+    // ElFooter,
   }
 }
 </script>

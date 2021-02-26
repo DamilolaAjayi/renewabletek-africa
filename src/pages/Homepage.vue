@@ -1,63 +1,64 @@
 <template>
   <main>
-      <div class="section-container">
-        <p class="logo__body">
-        <img
-            src="http://placehold.it/200x30"
-            alt="RenewableTek Africa Logo"
-            class="logo"
-        />
-        </p>
-        <header class="section__header">
+    <div class="section-container">
+      <header class="section__header">
         <h2>
-            RenewableTek Africa
+          RenewableTek Africa
         </h2>
-        </header>
-        <section class="hero__body">
-            <div class="hero-body__text">
-                <p>
-                RenewableTek Africa is the premier renewable energy consulting firm
-                providing a range of services including; engineering, procurement,
-                construction, maintenance, training and development of renewable
-                energy assets across sub-saharan Africa.
-                </p>
-            </div>
-            <div>
-                <img src="http://placehold.it/600x400" alt="Engineering Projects" />
-            </div>
-        </section>
-      </div>
-  </main>
+      </header>
+      <section class="hero__body">
+        <p class="hero-body__text">
+          RenewableTek Africa is the premier renewable energy consulting firm
+          providing a range of services including; engineering, procurement,
+          construction, maintenance, training and development of renewable
+          energy assets across sub-saharan Africa.
+        </p>
+      </section>
+    </div>
+    </main>
 </template>
 
 <script>
 export default {
-  name: "homepage",
+  name: 'homepage',
 };
 </script>
 
 <style scoped>
-.logo__body {
-  min-height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+main {
+    height: 100vh;
 }
-
+.section__header h2 {
+  text-align: center;
+  animation: 2s appear;
+}
 .hero-body__text {
-    max-width: 45rem;
+  background: var(--neutralTwo);
+  font-size: 2rem;
+  padding: 2rem;
+  border-radius: 6px;
+  margin-top: 6rem;
+}
+.section-container {
+  max-width: 40rem;
+  margin: 4rem auto;
 }
 .hero-body__text p {
-    font-size: 2rem;
+  font-size: 2rem;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
 }
 @media screen and (min-width: 768px) {
-    .hero__body {
-        display: flex;
-        justify-content: space-between;
-    }
-    .hero-body__text p {
-        font-size: 2rem;
-        margin-top: 10rem;
-    }
+  .hero-body__text {
+    font-size: 2.5rem;
+    margin-top: 10rem;
+  }
+  .section-container {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
 }
 </style>
