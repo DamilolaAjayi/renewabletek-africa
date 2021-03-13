@@ -1,22 +1,22 @@
 :root {
-  --primaryOne: #1F2138;
+  --primaryOne: #FFC268;
   --primaryTwo: #76788E;
-  --primaryThree: #089eff;
-  --primaryFour:  #1281CA;
-  --primaryFive: #ECECF2;
   
-  --typeOne: #22A8FF;
+  --secondaryOne: #554123;
+  --secondaryTwo: #2A2A2A;
+  --secondaryThree: #FFD79B;
+  --secondaryFour: #68F1FF;
+  --secondaryFive: #FF7768;
 
   --neutralOne: #000000;
   --neutralTwo: #0B0B0B;
-  --neutralThree: #c9c8c8;
-  --neutralFour: #f2efef;
+  --neutralThree: #0B0B0B;
+  --neutralFour: #DDDDDD;
   --neutralFive: #f6f6f6;
   --neutralSix: #fff;
 
   --accentOne: #c7ffd8;
   --accentTwo: #98ded9;
-  --accentThree: #161d6f;
 
   --semanticOne: #ffffff;
   --semanticTwo: #fafdff;
