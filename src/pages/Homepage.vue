@@ -70,22 +70,22 @@
 </template>
 
 <script>
-import IsPhone from "@/mixins/IsPhone";
-import "animate.css";
+import IsPhone from '@/mixins/IsPhone';
+import 'animate.css';
 
 export default {
-  name: "Home",
+  name: 'Home',
   mixins: [IsPhone],
   data() {
     return {
-      dataText: "Premier renewable energy consulting firm providing a range of services including:",
+      dataText: 'Premier renewable energy consulting firm providing a range of services including:',
       headerAnimationDone: false,
       runanimation: false,
       loadAnimation: false,
     };
   },
   beforeMount() {
-    window.addEventListener("DOMContentLoaded", this.domLoaded);
+    window.addEventListener('DOMContentLoaded', this.domLoaded);
   },
   methods: {
     domLoaded() {
@@ -97,7 +97,7 @@ export default {
       const self = this;
       if (i < text.length) {
         // add next character to h1
-        document.querySelector("h2").innerHTML =
+        document.querySelector('h2').innerHTML =
           text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
 
         // wait for a while and call this function again for next character
