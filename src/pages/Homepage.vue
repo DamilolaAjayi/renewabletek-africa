@@ -1,147 +1,241 @@
 <template>
-  <main>
-    <div class="section-container">
-      <h3 class="hero__header">
-        RenewableTek Africa is the premier 
-        <span class="highlight">
-          renewable energy consulting
-        </span>
-        firm
-        providing a range of services including:
-      </h3>
-      <div class="services-list">
-        <section class="services-list__card">
-          <engineering-icon />
-          <div class="services-list-card__textbox">
-            <p>Engineering</p>
+  <main id="home">
+    <div
+      class="hero-page section-container"
+    >
+      <div class="hero-page__textbox">
+        <div>
+          <h2>
+            Premier renewable energy consulting firm providing a range of services including:
+          </h2>
+          <div class="hero-page__carousel-parent">
+            <transition
+              mode="out-in"
+              enter-active-class="animate__animated animate__fadeIn"
+            >
+              <div
+                class="hero-page__carousel"
+                v-if="IsPhone && headerAnimationDone"
+              >
+                <div class="solar-illustration">
+                  <img src="@/assets/images/renewable-project.png" alt="">
+                </div>
+              </div>
+            </transition>
           </div>
-        </section>
-        <section class="services-list__card">
-          <procurement-icon />
-          <div class="services-list-card__textbox">
-            <p>Procurement</p>
-          </div>
-        </section>
-        <section class="services-list__card">
-          <construction-icon />
-          <div class="services-list-card__textbox">
-            <p>Construction</p>
-          </div>
-        </section>
-        <section class="services-list__card">
-          <maintenance-icon />
-          <div class="services-list-card__textbox">
-            <p>Maintenance</p>
-          </div>
-        </section>
-        <section class="services-list__card">
-          <training-icon />
-          <div class="services-list-card__textbox">
-            <p>Training</p>
-          </div>
-        </section>
-      </div>
-      <div class="services-list__last">
-          <p class="big-amp">
-            &amp;
+          <transition
+            mode="out-in"
+            enter-active-class="animate__animated animate__fadeInLeft"
+          >
+            <div class="hero-page__brief" v-if="loadAnimation">
+              <ul>
+                <li>Engineering</li>
+                <li>Procurement</li>
+                <li>Construction</li>
+                <li>Maintenance</li>
+                <li>Training</li>
+                <li>Development of renewable energy assets across sub-saharan Africa</li>
+              </ul>
+            </div>
+          </transition>
+        </div>
+        <transition
+          mode="out-in"
+          enter-active-class="animate__animated animate__fadeInLeftBig"
+        >
+          <p v-show="headerAnimationDone" class="button-block">
+            <a class="s-button" target="_blank">
+              Download App
+            </a>
           </p>
-          <h4>Development of renewable energy assets across sub-saharan Africa.</h4>
+        </transition>
+      </div>
+      <div class="hero-page__carousel-parent">
+        <!-- <transition
+          mode="out-in"
+          enter-active-class="animate__animated animate__fadeIn"
+        > -->
+          <!-- <div
+            class="hero-page__carousel"
+            v-if="!IsPhone && headerAnimationDone"
+          > -->
+          <div class="solar-illustration">
+            <img src="@/assets/images/renewable-project.png" alt="">
+          </div>
+          <!-- </div> -->
+        <!-- </transition> -->
       </div>
     </div>
   </main>
 </template>
 
 <script>
-import ConstructionIcon from '../components/global/icons/construction';
-import EngineeringIcon from '../components/global/icons/engineering-icon';
-import MaintenanceIcon from '../components/global/icons/maintenance';
-import ProcurementIcon from '../components/global/icons/procurement';
-import TrainingIcon from '../components/global/icons/training';
+import IsPhone from '@/mixins/IsPhone';
+import 'animate.css';
 
 export default {
-  name: 'homepage',
-  components: {
-    EngineeringIcon,
-    ProcurementIcon,
-    ConstructionIcon,
-    MaintenanceIcon,
-    TrainingIcon,
-  }
+  name: 'Home',
+  mixins: [IsPhone],
+  data() {
+    return {
+      dataText: 'Premier renewable energy consulting firm providing a range of services including:',
+      headerAnimationDone: false,
+      runanimation: false,
+      loadAnimation: false,
+    };
+  },
+  beforeMount() {
+    window.addEventListener('DOMContentLoaded', this.domLoaded);
+  },
+  methods: {
+    domLoaded() {
+      setTimeout(() => {
+        this.loadAnimation = true;
+      }, 80);
+    },
+    typeWriter(text, i) {
+      const self = this;
+      if (i < text.length) {
+        // add next character to h1
+        document.querySelector('h2').innerHTML =
+          text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+
+        // wait for a while and call this function again for next character
+        setTimeout(function() {
+          self.typeWriter(text, i + 1);
+        }, 80);
+      }
+      if (i === text.length) {
+        this.headerAnimationDone = true;
+        setTimeout(() => {
+          this.startTextAnimation();
+        }, 3000);
+      }
+    },
+    startTextAnimation() {
+      // text exists! start typewriter animation
+      this.typeWriter(this.dataText, 0);
+    },
+  },
 };
 </script>
 
 <style scoped>
-main {
-    height: 100vh;
+.hero-page__carousel__image {
+  max-height: 40rem;
+  object-fit: cover;
+  max-width: 60rem;
 }
-.services-list {
-  animation: 2s appear;
+.hero-page__brief {
+  color: var(--neutralOne);
+  padding: 3rem 0;
 }
-.services-list__last {
-  animation-name: 5s appear;
+.hero-page__brief li::before {
+  content: '-';
+  translate: 0.3s;
+  margin-right: 5px;
 }
-.section-container {
-  /* max-width: 40rem;
-  margin: 4rem auto; */
+.hero-page-brief__text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.hero-page-brief__text:first-child {
+  margin-bottom: 1rem;
+}
+.s-button {
+  line-height: 1.7;
+}
+.hero-page-brief__text span {
+  min-width: 6rem;
+  display: inline-block;
+}
+.hero-page__textbox h2 {
+  min-height: 10.2rem;
+  margin-bottom: 2rem;
+}
+.hero-page {
+  margin-top: 10rem;
+}
+.hero-page__textbox {
+  color: black;
+  margin-bottom: 6rem;
+}
+.hero-page__carousel-parent {
+  position: relative;
+}
+.hero-page__carousel__image {
+  border-radius: 6px;
+}
+.hero-page__carousel__image img {
+  z-index: 5;
+  height: 40rem;
+  border-radius: 6px;
+  border: 1px solid rgb(0 0 0 / 8%);
+}
+.button-block {
+  margin-top: 2rem;
 }
 @media screen and (min-width: 768px) {
-  .hero__header {
-    /* font-size: 2.5rem; */
-    max-width: 80rem;
-    padding-top: 2rem;
-    margin-top: 12rem;
-  }
-  .services-list {
-    color: var(--semanticOne);
-    font-size: 1.8rem;
-    width: 100%;
-    display: grid;
-    grid-column-gap: 10px;
-    grid-template-columns: auto auto auto auto auto;
+  .hero-page {
+    display: flex;
     justify-content: space-between;
-    margin: 5rem auto 0;
+    align-items: center;
+    margin-top: 9rem;
+    min-height: 50rem;
+    padding-bottom: 5rem;
   }
-  .services-list__card {
-    width: 20rem;
-    text-align: center;
-    padding: 2rem;
+  .hero-page__carousel-parent {
+    width: 50%;
+  }
+  .hero-page__brief {
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
     border-radius: 10px;
-    color: var(--secondaryFour);
   }
-  .services-list__last {
-    text-align: center;
-    animation: 10s appear;
+  .hero-page__textbox {
+    color: black;
+    max-width: 40%;
+    margin-bottom: 4rem;
   }
-  .services-list__last h4 {
-    font-weight: 600;
-    margin-top: 0.5rem;
-    margin-left: 1.5rem;
+  .hero-page__textbox h2 {
+    min-height: 10.4rem;
+    font-size: 3rem;
   }
-  .services-list__card svg {
-    width: 10.4rem;
-    height: 10.4rem;
-    fill: var(--semanticOne);
+  .hero-page__carousel {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0;
+    min-height: 45rem;
   }
- .services-list-card__textbox {
-   margin-top: 1rem;
- }
- .services-list-card__textbox p {
-   color: var(--secondaryFour);
- }
- .big-amp {
-    margin: 1.5rem 0;
-    font-size: 6rem;
- }
+  h2 span {
+    border-right: 0.05em solid;
+    animation: caret 1s steps(1) infinite;
+  }
+
+  @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }
 }
-.highlight {
-  color: var(--primaryOne);
+@media screen and (max-width: 767px) {
+  main {
+    min-height: 60rem;
+  }
+  .section-container {
+    padding-bottom: 0;
+  }
+  .hero-page__carousel__image {
+    height: auto;
+    object-fit: cover;
+  }
+  .hero-page__carousel__image img {
+    height: 20rem;
+  }
+  .hero-page__carousel {
+    max-width: 30rem;
+  }
 }
 </style>
