@@ -3,7 +3,7 @@
     <div class="nav-left">
       <div class="nav-logo">
         <a href="#home" v-smooth-scroll="{ duration: 1000, offset: -70 }">
-          <img src="@/assets/images/renewabletek-africa-monochrome-full-logo-sm.png" alt="RenewableTek Africa Logo" />
+          <img src="@/assets/images/renewabletek-africa-full-logo-mx-sm.png" alt="RenewableTek Africa Logo" />
         </a>
       </div>
     </div>
@@ -86,7 +86,7 @@ export default {
   font-weight: 500;
   z-index: 10;
   padding: 2rem 6%;
-  background: var(--neutralOne);
+  background: var(--semanticOne);
 }
 .nav-logo img {
   height: 6.5rem;

@@ -6,7 +6,7 @@
       <div class="hero-page__textbox">
         <div>
           <h2>
-            Empowering small merchants to grow big profits.
+            Premier renewable energy consulting firm providing a range of services including:
           </h2>
           <div class="hero-page__carousel-parent">
             <transition
@@ -27,16 +27,15 @@
             mode="out-in"
             enter-active-class="animate__animated animate__fadeInLeft"
           >
-            <div class="hero-page__brief" v-if="headerAnimationDone">
-              <p class="hero-page-brief__text">
-                merchants have put their trust in Spaces to grow their business
-                and increase their income.
-              </p>
-              <p class="hero-page-brief__text">
-                Spaces helps you track your sales, provide insights on your
-                customers, and manage logistics all while providing access to
-                finance and a broader market for your products.
-              </p>
+            <div class="hero-page__brief" v-if="loadAnimation">
+              <ul>
+                <li>Engineering</li>
+                <li>Procurement</li>
+                <li>Construction</li>
+                <li>Maintenance</li>
+                <li>Training</li>
+                <li>Development of renewable energy assets across sub-saharan Africa</li>
+              </ul>
             </div>
           </transition>
         </div>
@@ -45,26 +44,26 @@
           enter-active-class="animate__animated animate__fadeInLeftBig"
         >
           <p v-show="headerAnimationDone" class="button-block">
-            <a class="s-button" target="_blank" @click="openDownloadAppModal">
+            <a class="s-button" target="_blank">
               Download App
             </a>
           </p>
         </transition>
       </div>
       <div class="hero-page__carousel-parent">
-        <transition
+        <!-- <transition
           mode="out-in"
           enter-active-class="animate__animated animate__fadeIn"
-        >
-          <div
+        > -->
+          <!-- <div
             class="hero-page__carousel"
             v-if="!IsPhone && headerAnimationDone"
-          >
+          > -->
           <div class="solar-illustration">
             <img src="@/assets/images/renewable-project.png" alt="">
           </div>
-          </div>
-        </transition>
+          <!-- </div> -->
+        <!-- </transition> -->
       </div>
     </div>
   </main>
@@ -79,9 +78,10 @@ export default {
   mixins: [IsPhone],
   data() {
     return {
-      dataText: "Empowering small merchants to grow big profits.",
+      dataText: "Premier renewable energy consulting firm providing a range of services including:",
       headerAnimationDone: false,
       runanimation: false,
+      loadAnimation: false,
     };
   },
   beforeMount() {
@@ -89,7 +89,9 @@ export default {
   },
   methods: {
     domLoaded() {
-      this.startTextAnimation();
+      setTimeout(() => {
+        this.loadAnimation = true;
+      }, 80);
     },
     typeWriter(text, i) {
       const self = this;
@@ -125,8 +127,13 @@ export default {
   max-width: 60rem;
 }
 .hero-page__brief {
-  color: var(--primaryTwo);
+  color: var(--neutralOne);
   padding: 3rem 0;
+}
+.hero-page__brief li::before {
+  content: '-';
+  translate: 0.3s;
+  margin-right: 5px;
 }
 .hero-page-brief__text {
   font-size: 1.6rem;
@@ -183,7 +190,7 @@ export default {
   }
   .hero-page__brief {
     padding: 1rem 0;
-    background: var(--neutralTwo);
+    font-size: 2.5rem;
     box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
     border-radius: 10px;
   }
@@ -193,7 +200,8 @@ export default {
     margin-bottom: 4rem;
   }
   .hero-page__textbox h2 {
-    min-height: 6.4rem;
+    min-height: 10.4rem;
+    font-size: 3rem;
   }
   .hero-page__carousel {
     width: 100%;
