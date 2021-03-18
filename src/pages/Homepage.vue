@@ -9,88 +9,42 @@
         firm
         providing a range of services including:
       </h3>
-      <div class="services-list">
-        <section class="services-list__card">
-          <engineering-icon />
-          <div class="services-list-card__textbox">
-            <p>Engineering</p>
-          </div>
-        </section>
-        <section class="services-list__card">
-          <procurement-icon />
-          <div class="services-list-card__textbox">
-            <p>Procurement</p>
-          </div>
-        </section>
-        <section class="services-list__card">
-          <construction-icon />
-          <div class="services-list-card__textbox">
-            <p>Construction</p>
-          </div>
-        </section>
-        <section class="services-list__card">
-          <maintenance-icon />
-          <div class="services-list-card__textbox">
-            <p>Maintenance</p>
-          </div>
-        </section>
-        <section class="services-list__card">
-          <training-icon />
-          <div class="services-list-card__textbox">
-            <p>Training</p>
-          </div>
-        </section>
-      </div>
-      <div class="services-list__last">
-          <p class="big-amp">
-            &amp;
-          </p>
-          <h4>Development of renewable energy assets across sub-saharan Africa.</h4>
+      <div class="hero-page">
+        <div class="services">
+          <ul class="services-list">
+            <li class="services-list__item highlight">engineering</li>
+            <li class="services-list__item highlight">procurement</li>
+            <li class="services-list__item highlight">construction</li>
+            <li class="services-list__item highlight">maintenance</li>
+            <li class="services-list__item highlight">training</li>
+            <li class="services-list__item highlight">development of renewable energy assets across sub-saharan Africa.</li>
+          </ul>
+        </div>
+        <div class="solar-illustration">
+          <img src="@/assets/images/renewable-project.png" alt="">
+        </div>
       </div>
     </div>
   </main>
 </template>
 
 <script>
-import ConstructionIcon from '../components/global/icons/construction';
-import EngineeringIcon from '../components/global/icons/engineering-icon';
-import MaintenanceIcon from '../components/global/icons/maintenance';
-import ProcurementIcon from '../components/global/icons/procurement';
-import TrainingIcon from '../components/global/icons/training';
 
 export default {
   name: 'homepage',
-  components: {
-    EngineeringIcon,
-    ProcurementIcon,
-    ConstructionIcon,
-    MaintenanceIcon,
-    TrainingIcon,
-  }
 };
 </script>
 
 <style scoped>
-main {
-    height: 100vh;
-}
 .services-list {
   animation: 2s appear;
 }
 .services-list__last {
-  animation-name: 5s appear;
+  /* animation-name: 5s appear; */
 }
 .section-container {
   /* max-width: 40rem;
   margin: 4rem auto; */
-}
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 @media screen and (min-width: 768px) {
   .hero__header {
@@ -100,46 +54,25 @@ main {
     margin-top: 12rem;
   }
   .services-list {
-    color: var(--semanticOne);
-    font-size: 1.8rem;
-    width: 100%;
-    display: grid;
-    grid-column-gap: 10px;
-    grid-template-columns: auto auto auto auto auto;
-    justify-content: space-between;
-    margin: 5rem auto 0;
+    margin: 3rem 0;
   }
-  .services-list__card {
-    width: 20rem;
-    text-align: center;
-    padding: 2rem;
-    border-radius: 10px;
-    color: var(--secondaryFour);
+  .hero-page {
+    display: flex;
   }
-  .services-list__last {
-    text-align: center;
-    animation: 10s appear;
+  .services {
+    width: 50%;
   }
-  .services-list__last h4 {
+  .services-list__item {
+    font-size: 2.5rem;
     font-weight: 600;
-    margin-top: 0.5rem;
-    margin-left: 1.5rem;
+    padding: 1.5rem 0;
+    /* opacity: 0.8; */
   }
-  .services-list__card svg {
-    width: 10.4rem;
-    height: 10.4rem;
-    fill: var(--semanticOne);
+  .services-list__item:before {
+    content: '-';
+    translate: 0.3s;
+    margin-right: 5px;
   }
- .services-list-card__textbox {
-   margin-top: 1rem;
- }
- .services-list-card__textbox p {
-   color: var(--secondaryFour);
- }
- .big-amp {
-    margin: 1.5rem 0;
-    font-size: 6rem;
- }
 }
 .highlight {
   color: var(--primaryOne);

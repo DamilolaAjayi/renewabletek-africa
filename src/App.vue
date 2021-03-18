@@ -3,8 +3,8 @@
     <navigation />
     <homepage />
     <!-- <partner /> -->
-    <!-- <way-of-business />
-    <el-footer /> -->
+    <value />
+    <!-- <el-footer /> -->
   </div>
 </template>
 
@@ -14,7 +14,7 @@ import Homepage from './pages/Homepage';
 import Navigation from './components/global/navigation/Nav';
 // import Partner from './pages/Partner';
 
-// import WayOfBusiness from './pages/WayOfBusiness';
+import Value from './pages/Value';
 
 export default {
   name: 'App',
@@ -22,7 +22,7 @@ export default {
     Homepage,
     Navigation,
     // Partner,
-    // WayOfBusiness,
+    Value,
     // ElFooter,
   }
 }
