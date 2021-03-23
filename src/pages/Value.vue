@@ -26,8 +26,9 @@ export default {
 
 <style scoped>
     .business__principles {
-        font-size: 3rem;
+        font-size: 2rem;
         color: var(--neutralOne);
+        margin-bottom: 4rem;
     }
     .section__header {     
         margin-top: 10rem;
@@ -37,5 +38,15 @@ export default {
         content: '-';
         translate: 0.3s;
         margin-right: 5px;
+    }
+    @media screen and (min-width: 768px) {
+        .business__principles {
+            font-size: 3rem;
+            color: var(--neutralOne);
+        }
+        .section__header {     
+            margin-top: 10rem;
+            margin-bottom: 4rem;
+        }
     }
 </style>
