@@ -1,5 +1,5 @@
 <template>
-  <div class="nav" :class="{ 'nav-scrolled': !view.atTopOfPage }">
+  <div class="nav">
     <div class="nav-left">
       <div class="nav-logo">
         <a href="#home" v-smooth-scroll="{ duration: 1000, offset: -70 }">
@@ -54,20 +54,10 @@ export default {
       },
     };
   },
-  beforeMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
   methods: {
     closeMobileNav() {
       this.showMobileNav = false;
       this.menuClicked = false;
-    },
-    handleScroll() {
-      if (window.pageYOffset > 0) {
-        if (this.view.atTopOfPage) this.view.atTopOfPage = false;
-      } else {
-        if (!this.view.atTopOfPage) this.view.atTopOfPage = true;
-      }
     },
     toggleMenu() {
       this.showMobileNav = !this.showMobileNav;
@@ -86,7 +76,7 @@ export default {
   font-weight: 500;
   z-index: 10;
   padding: 2rem 6%;
-  background: var(--semanticOne);
+  background: rgba(255,255,255,0.95);
 }
 .nav-logo img {
   height: 6.5rem;
@@ -105,11 +95,6 @@ export default {
 .nav-right {
   justify-content: flex-end;
   width: 50%;
-}
-.nav-scrolled {
-  transition: transform 0.5s;
-  box-shadow: 0px 
-  0px 10px rgba(0, 0, 0, 0.1);
 }
 .nav-content {
   width: inherit;

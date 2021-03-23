@@ -1,7 +1,6 @@
 <template>
   <div class="web-nav">
-    <a href="#people" class="web-nav-link" v-smooth-scroll="{ duration: 1000, offset: -50 }">People</a>
-    <a href="#partner" class="web-nav-link" v-smooth-scroll="{ duration: 1000, offset: -50 }">Partner</a>
+    <a href="#people" class="web-nav-link" v-smooth-scroll="{ duration: 1000, offset: -50 }">About</a>
   </div>
 </template>
 
@@ -24,11 +23,8 @@ export default {
   vertical-align: top;
   text-decoration: none;
   text-align: left;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 2.4rem;
   font-weight: 600;
-}
-.web-nav-link:last-child {
-  padding-right: 0;
 }
 </style>
