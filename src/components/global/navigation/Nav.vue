@@ -79,7 +79,6 @@ export default {
   background: rgba(255,255,255,0.95);
 }
 .nav-logo img {
-  height: 6.5rem;
   width: auto;
 }
 .nav-left,

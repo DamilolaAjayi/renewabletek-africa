@@ -46,7 +46,7 @@
         We partner with our clients to support the 
         <span class="hightlight">safe and efficient production</span>,
         <span class="hightlight">delivery</span>,&nbsp;and&nbsp;
-        <span class="hightlight">use of renewable energy.</span> 
+        <span class="hightlight">use of renewable energy</span>.
       </p>
     </div>
   </main>
