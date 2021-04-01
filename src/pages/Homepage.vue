@@ -8,21 +8,6 @@
           <h2>
             Premier renewable energy consulting firm providing a range of services including:
           </h2>
-          <div class="hero-page__carousel-parent">
-            <transition
-              mode="out-in"
-              enter-active-class="animate__animated animate__fadeIn"
-            >
-              <div
-                class="hero-page__carousel"
-                v-if="IsPhone && headerAnimationDone"
-              >
-                <div class="solar-illustration">
-                  <img src="@/assets/images/renewable-project.png" alt="">
-                </div>
-              </div>
-            </transition>
-          </div>
           <transition
             mode="out-in"
             enter-active-class="animate__animated animate__fadeInLeft"
@@ -39,43 +24,31 @@
             </div>
           </transition>
         </div>
-        <transition
-          mode="out-in"
-          enter-active-class="animate__animated animate__fadeInLeftBig"
-        >
-          <p v-show="headerAnimationDone" class="button-block">
-            <a class="s-button" target="_blank">
-              Download App
-            </a>
-          </p>
-        </transition>
       </div>
       <div class="hero-page__carousel-parent">
-        <!-- <transition
+        <transition
           mode="out-in"
           enter-active-class="animate__animated animate__fadeIn"
-        > -->
-          <!-- <div
+        >
+          <div
             class="hero-page__carousel"
-            v-if="!IsPhone && headerAnimationDone"
-          > -->
-          <div class="solar-illustration">
-            <img src="@/assets/images/renewable-project.png" alt="">
+            v-if="loadAnimation"
+          >
+            <div class="solar-illustration">
+              <img src="@/assets/images/renewable-project.png" alt="">
+            </div>
           </div>
-          <!-- </div> -->
-        <!-- </transition> -->
+        </transition>
       </div>
     </div>
   </main>
 </template>
 
 <script>
-import IsPhone from '@/mixins/IsPhone';
 import 'animate.css';
 
 export default {
   name: 'Home',
-  mixins: [IsPhone],
   data() {
     return {
       dataText: 'Premier renewable energy consulting firm providing a range of services including:',
@@ -89,9 +62,7 @@ export default {
   },
   methods: {
     domLoaded() {
-      setTimeout(() => {
-        this.loadAnimation = true;
-      }, 80);
+      this.startTextAnimation();
     },
     typeWriter(text, i) {
       const self = this;
@@ -103,13 +74,11 @@ export default {
         // wait for a while and call this function again for next character
         setTimeout(function() {
           self.typeWriter(text, i + 1);
-        }, 80);
+        }, 60);
       }
       if (i === text.length) {
         this.headerAnimationDone = true;
-        setTimeout(() => {
-          this.startTextAnimation();
-        }, 3000);
+        this.loadAnimation = true;
       }
     },
     startTextAnimation() {
@@ -128,27 +97,25 @@ export default {
 }
 .hero-page__brief {
   color: var(--neutralOne);
+  min-height: 13rem;
   padding: 3rem 0;
+  font-size: 1.8rem;
 }
 .hero-page__brief li::before {
   content: '-';
   translate: 0.3s;
   margin-right: 5px;
 }
-.hero-page-brief__text {
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 1.2;
+.hero-page__brief li {
+  padding-bottom: 0.2rem;
+  border-bottom: 0.1px solid var(--primaryOne);
+  width: max-content;
 }
-.hero-page-brief__text:first-child {
-  margin-bottom: 1rem;
+.hero-page__brief li:hover {
+  font-weight: 600;
 }
-.s-button {
-  line-height: 1.7;
-}
-.hero-page-brief__text span {
-  min-width: 6rem;
-  display: inline-block;
+.hero-page__brief li:last-of-type {
+  max-width: 30rem;
 }
 .hero-page__textbox h2 {
   min-height: 10.2rem;
@@ -167,21 +134,20 @@ export default {
 .hero-page__carousel__image {
   border-radius: 6px;
 }
+.hero-page__brief li {
+  padding: 0.8rem 0;
+}
 .hero-page__carousel__image img {
   z-index: 5;
   height: 40rem;
   border-radius: 6px;
-  border: 1px solid rgb(0 0 0 / 8%);
-}
-.button-block {
-  margin-top: 2rem;
 }
 @media screen and (min-width: 768px) {
   .hero-page {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 9rem;
+    margin-top: 12rem;
     min-height: 50rem;
     padding-bottom: 5rem;
   }
@@ -191,8 +157,13 @@ export default {
   .hero-page__brief {
     padding: 1rem 0;
     font-size: 2.5rem;
-    box-shadow: 0px 1px 6px rgb(0 0 0 / 2%);
     border-radius: 10px;
+  }
+  .hero-page__brief li {
+    padding: 1rem 0;
+  }
+  .hero-page__brief li:last-of-type {
+    max-width: 50rem;
   }
   .hero-page__textbox {
     color: black;
@@ -233,9 +204,6 @@ export default {
   }
   .hero-page__carousel__image img {
     height: 20rem;
-  }
-  .hero-page__carousel {
-    max-width: 30rem;
   }
 }
 </style>

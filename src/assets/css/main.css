@@ -58,7 +58,6 @@ body {
   font-family: "Mont", -apple-system, BlinkMacSystemFont, "Segoe UI", Mont,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
-  background-color: var(--semanticOne);
 }
 
 h1, h2, h3, h4, a, p, span, h5, h6, button, main, section {
@@ -97,14 +96,16 @@ h5 {
   font-weight: 300;
 }
 a {
-  color: var(--primaryOne);
+  color: var(--semanticOne);
   outline: var(--primaryTwo);
   font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 1.2px;
   cursor: point;
   text-decoration: none;
 }
 a:hover {
-  color: var(--neutralOne);
+  color: var(--primaryOne);
 }
 button {
   cursor: poMont;
@@ -185,7 +186,6 @@ p {
     padding-left: 6%;
   }
   main {
-    height: 90vh;
     border-bottom: 0.1px solid rgba(221, 221, 221, 0.1);
   }
 }

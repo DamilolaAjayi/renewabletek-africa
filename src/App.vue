@@ -32,5 +32,4 @@ export default {
 <style src="./assets/css/variables.css"></style>
 <style src="./assets/css/main.css"></style>
 
-<style>
-</style>
+<style></style>

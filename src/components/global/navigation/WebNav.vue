@@ -26,5 +26,9 @@ export default {
   font-size: 1.8rem;
   line-height: 2.4rem;
   font-weight: 600;
+  color: var(--neutralOne);
+}
+.web-nav-link:hover {
+  color: var(--primaryOne);
 }
 </style>
