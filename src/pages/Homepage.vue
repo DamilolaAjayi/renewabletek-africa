@@ -41,6 +41,14 @@
         </transition>
       </div>
     </div>
+    <div class="homepage__footer">
+      <p>
+        We partner with our clients to support the 
+        <span class="hightlight">safe and efficient production</span>,
+        <span class="hightlight">delivery</span>,&nbsp;and&nbsp;
+        <span class="hightlight">use of renewable energy.</span> 
+      </p>
+    </div>
   </main>
 </template>
 
@@ -142,6 +150,16 @@ export default {
   height: 40rem;
   border-radius: 6px;
 }
+.homepage__footer {
+  background: var(--semanticFour);
+  padding: 3rem 6%;
+  box-shadow: 5px 
+  0px 5px rgba(0, 0, 0, 0.1);
+}
+.homepage__footer p {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
 @media screen and (min-width: 768px) {
   .hero-page {
     display: flex;
@@ -149,7 +167,7 @@ export default {
     align-items: center;
     margin-top: 12rem;
     min-height: 50rem;
-    padding-bottom: 5rem;
+    padding-bottom: 0;
   }
   .hero-page__carousel-parent {
     width: 50%;
@@ -168,7 +186,7 @@ export default {
   .hero-page__textbox {
     color: black;
     max-width: 40%;
-    margin-bottom: 4rem;
+    margin-bottom: 0;
   }
   .hero-page__textbox h2 {
     min-height: 10.4rem;

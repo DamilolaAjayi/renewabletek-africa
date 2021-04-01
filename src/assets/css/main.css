@@ -107,6 +107,9 @@ a {
 a:hover {
   color: var(--primaryOne);
 }
+.hightlight {
+  color: #98BE42;
+}
 button {
   cursor: poMont;
 }
