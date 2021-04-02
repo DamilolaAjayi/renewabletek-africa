@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <section class="section">
       <div class="section-container">
         <header class="section__header">
             <h3>
@@ -35,7 +35,7 @@
             </div>
         </section>
       </div>
-  </main>
+  </section>
 </template>
 
 <script>
@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style scoped>
-    main {
+    .section {
         padding-top: 3rem;
         background-image: linear-gradient(
         0deg
@@ -56,8 +56,7 @@ export default {
         color: var(--neutralOne);
         margin-bottom: 4rem;
     }
-    .section__header {     
-        margin-top: 10rem;
+    .section__header {
         margin-bottom: 4rem;
     }
     .section__header h3 {
@@ -93,7 +92,7 @@ export default {
         padding: 1.5rem;
     }
     @media screen and (min-width: 768px) {
-        main {
+        .section {
             height: 90vh;
         }
         .business__principles {

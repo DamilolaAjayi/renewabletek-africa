@@ -1,12 +1,12 @@
 <template>
-  <main id="home">
+  <section id="homepage" class="section">
     <div
       class="hero-page section-container"
     >
       <div class="hero-page__textbox">
         <div>
           <h2>
-            Premier renewable energy consulting firm providing a range of services including:
+            Renewable Energy Consulting
           </h2>
           <transition
             mode="out-in"
@@ -25,75 +25,18 @@
           </transition>
         </div>
       </div>
-      <div class="hero-page__carousel-parent">
-        <transition
-          mode="out-in"
-          enter-active-class="animate__animated animate__fadeIn"
-        >
-          <div
-            class="hero-page__carousel"
-            v-if="loadAnimation"
-          >
-            <div class="solar-illustration">
-              <img src="@/assets/images/renewable-project.png" alt="">
-            </div>
-          </div>
-        </transition>
-      </div>
     </div>
     <div class="homepage__footer">
       <p>
-        We partner with our clients to support the 
-        <span class="hightlight">safe and efficient production</span>,
-        <span class="hightlight">delivery</span>,&nbsp;and&nbsp;
-        <span class="hightlight">use of renewable energy</span>.
+        RenewableTek Africa is led by a versatile group of individuals with deep experience in renewable energy and emerging markets.
       </p>
     </div>
-  </main>
+  </section>
 </template>
 
 <script>
-import 'animate.css';
-
 export default {
   name: 'Home',
-  data() {
-    return {
-      dataText: 'Premier renewable energy consulting firm providing a range of services including:',
-      headerAnimationDone: false,
-      runanimation: false,
-      loadAnimation: false,
-    };
-  },
-  beforeMount() {
-    window.addEventListener('DOMContentLoaded', this.domLoaded);
-  },
-  methods: {
-    domLoaded() {
-      this.startTextAnimation();
-    },
-    typeWriter(text, i) {
-      const self = this;
-      if (i < text.length) {
-        // add next character to h1
-        document.querySelector('h2').innerHTML =
-          text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
-
-        // wait for a while and call this function again for next character
-        setTimeout(function() {
-          self.typeWriter(text, i + 1);
-        }, 60);
-      }
-      if (i === text.length) {
-        this.headerAnimationDone = true;
-        this.loadAnimation = true;
-      }
-    },
-    startTextAnimation() {
-      // text exists! start typewriter animation
-      this.typeWriter(this.dataText, 0);
-    },
-  },
 };
 </script>
 
@@ -130,7 +73,7 @@ export default {
   margin-bottom: 2rem;
 }
 .hero-page {
-  margin-top: 10rem;
+  padding-top: 10rem;
 }
 .hero-page__textbox {
   color: black;
@@ -165,9 +108,13 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 12rem;
+    height: 100vh;
     min-height: 50rem;
     padding-bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image:
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(255, 255, 255, 0.73)), url(https://ik.imagekit.io/7dkc9ii1v1r/solar-panel-cell-dramatic-sunset-sky-background-clean-alternative-power-energy-concept-min_RcVKg15PY.jpg);
   }
   .hero-page__carousel-parent {
     width: 50%;
@@ -210,7 +157,7 @@ export default {
   }
 }
 @media screen and (max-width: 767px) {
-  main {
+  .section {
     min-height: 60rem;
   }
   .section-container {

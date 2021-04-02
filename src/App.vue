@@ -2,7 +2,7 @@
   <div id="app">
     <navigation />
     <homepage />
-    <!-- <partner /> -->
+    <partner />
     <value />
     <el-footer />
   </div>
@@ -12,7 +12,7 @@
 import ElFooter from './components/ElFooter';
 import Homepage from './pages/Homepage';
 import Navigation from './components/global/navigation/Nav';
-// import Partner from './pages/Partner';
+import Partner from './pages/Partner';
 
 import Value from './pages/Value';
 
@@ -21,7 +21,7 @@ export default {
   components: {
     Homepage,
     Navigation,
-    // Partner,
+    Partner,
     Value,
     ElFooter,
   }

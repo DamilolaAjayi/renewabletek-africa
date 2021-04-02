@@ -2,6 +2,7 @@
   <div class="nav__dropdown">
     <div class="nav-dropdown__list">
       <a href="#products" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 300 }">About</a>
+      <a href="#products" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 300 }">Contact</a>
     </div>
   </div>
 </template>
@@ -36,7 +37,7 @@ export default {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   right: 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 1rem;
 }
 </style>

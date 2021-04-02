@@ -64,7 +64,6 @@ h1, h2, h3, h4, a, p, span, h5, h6, button, main, section {
   font-family: inherit;
 }
 h1, h2, h3, h4, h5, h6 {
-  color: var(--neutralOne);
 }
 h1 {
   font-size: 3rem;
@@ -123,25 +122,6 @@ img {
   width: 100%;
   max-width: 100%;
 }
-.s-button {
-  background-color: var(--typeOne);
-  color: var(--semanticOne);
-  padding: 8px 30px;
-  width: max-content;
-  border-radius: 5px;
-  outline: none;
-  cursor: poMont;
-  border: none;
-  height: 4.4rem;
-  font-size: 1.6rem;
-  font-family: inherit;
-  font-weight: 500;
-  display: block;
-}
-.s-button:hover {
-  opacity: 0.7;
-  color: var(--semanticOne);
-}
 figcaption {
   font-weight: 500;
   color: var(--primaryOne);
@@ -149,7 +129,6 @@ figcaption {
 }
 p {
   line-height: 1.5;
-  color: var(--neutralOne);
   font-weight: 400;
   font-size: 1.6rem;
   margin: 0;
