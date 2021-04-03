@@ -9,7 +9,7 @@
           <span class="hightlight">use of renewable energy</span>.
         </p>
         <p>
-          We seek to foster a positive and innovative culture which we carry
+          We seek to foster a positive and innovative culture that we carry
           into our projects and give our clients powerful solutions.
         </p>
       </div>

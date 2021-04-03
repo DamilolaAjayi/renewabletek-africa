@@ -7,8 +7,11 @@
           src="@/assets/images/renewabletek-africa-monochrome-full-logo-lg.png"
           alt="RenewableTek Africa logo"
         />
+        <section class="footer__copyright">
+          <p>&#169; {{ currentYear }} RenewableTek Africa | All Rights Reserved</p>
+        </section>
       </div>
-      <div class="footer__column">
+      <div class="footer__column second">
         <p class="footer-about__header">COMPANY</p>
         <ul>
           <li>
@@ -22,21 +25,18 @@
           </li>
         </ul>
       </div>
-      <div class="footer__column">
+      <div class="footer__column second">
         <p class="footer-contact__header">CONTACT US</p>
         <a
           target="_blank"
           :href="`mailto:info@spaces.io`"
           class="footer-contact__email"
-          >info@renewabletek.africa</a
+          >info@renewabletekafrica.com</a
         >
         <a href="tel:+234-901-474-5515" class="footer-contact__mobile"
           >+234 816 967 9594</a
         >
       </div>
-    </section>
-    <section class="footer__copyright">
-      <p>&#169; {{ currentYear }} RenewableTek Africa | All Rights Reserved</p>
     </section>
   </footer>
 </template>
@@ -100,6 +100,7 @@ a:hover {
   .logo {
     height: 9rem;
     width: auto;
+    margin-bottom: 2rem;
   }
   .footer {
     padding: 8rem 1.5rem;
@@ -111,8 +112,8 @@ a:hover {
     display: flex;
     justify-content: space-between;
   }
-  .footer__column:nth-child(n + 1) {
-    margin-top: 1rem;
+  .second {
+    padding-top: 4rem;
   }
 }
 
