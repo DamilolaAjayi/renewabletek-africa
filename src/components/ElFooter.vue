@@ -55,7 +55,7 @@ export default {
 
 <style scoped>
 .footer {
-  padding: 3rem 1.5rem 6rem;
+  padding: 3rem 2rem 6rem;
 }
 .footer__main {
   padding-bottom: 1.5rem;

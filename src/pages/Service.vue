@@ -1,7 +1,7 @@
 <template>
   <section id="services" class="section">
     <div class="bg">
-        <h2>Services we provide</h2>
+        <h3>Services we provide</h3>
     </div>
   </section>
 </template>
@@ -14,7 +14,11 @@ export default {
 
 <style scoped>
 .section {
+  min-height: 30vh;
   background: var(--neutralFour);
+}
+.bg {
+    padding: 3rem 2rem;
 }
 .partner__textbox p:last-of-type {
   padding: 4rem 0;

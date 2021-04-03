@@ -63,6 +63,15 @@ export default {
 </script>
 
 <style scoped>
+.business-principles__block {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0;
+    text-align: center;
+}
+.business-principles__block:nth-child(even) {
+    flex-direction: column-reverse;
+}
 .section {
   padding-top: 3rem;
   background-image: linear-gradient(0deg, #fdfdfe, #f5f7fa);
@@ -70,9 +79,6 @@ export default {
 .business__principles {
   font-size: 2rem;
   color: var(--neutralOne);
-  margin-bottom: 4rem;
-}
-.section__header {
   margin-bottom: 4rem;
 }
 .section__header h3 {
@@ -95,8 +101,11 @@ p {
     margin-top: 10rem;
     margin-bottom: 4rem;
   }
+    .business-principles__block:nth-child(even) {
+        flex-direction: row;
+    }
   .business-principles__block {
-    display: flex;
+    flex-direction: row;
     margin: 0 auto 2rem;
     max-width: 100rem;
     align-items: center;
@@ -114,8 +123,10 @@ p {
   }
 }
 @media screen and (max-width: 767px) {
-  .company-about__header img {
-    width: 23rem;
-  }
+    .business-principles__block h3 {
+        line-height: 1.5;
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
 }
 </style>

@@ -41,6 +41,7 @@ export default {
 <style scoped>
 .section {
   background: var(--neutralFour);
+  padding: 3rem 2rem;
 }
 .partner__textbox p:last-of-type {
   padding: 4rem 0;

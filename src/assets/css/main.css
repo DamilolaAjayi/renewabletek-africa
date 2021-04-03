@@ -77,7 +77,7 @@ h2 {
 
 h3 {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -132,7 +132,7 @@ p {
   margin: 0;
 }  
 .section-container {
-  padding: 0 6%;
+  padding: 0 2rem;
 }
 html {
   scroll-behavior: smooth;
@@ -165,8 +165,7 @@ html {
     font-size: 1.2rem;
   }
   .section-container {
-    /* padding: 0 6%; */
-    padding-left: 6%;
+    padding: 0 6%;
   }
   main {
     border-bottom: 0.1px solid rgba(221, 221, 221, 0.1);
