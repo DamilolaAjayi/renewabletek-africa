@@ -1,39 +1,55 @@
 <template>
   <section class="section">
-      <div class="section-container">
-        <header class="section__header">
-            <h3>
-                These four principles govern the way we do business:
-            </h3>
-        </header>
-        <section class="business__principles">
-            <div class="company-portfolio">
-            <div class="company-portfolio__card">
-                <img src="@/assets/images/value/value-chain.svg" alt="performance icon">
-                <p>
-                    Distinctive value creation
-                </p>
-            </div>
-            <div class="company-portfolio__card">
-                <img src="@/assets/images/value/satisfaction.svg" alt="performance icon">
-                <p>
-                    Priority on customer success
-                </p>
-            </div>
-            <div class="company-portfolio__card">
-                <img src="@/assets/images/value/excellence.svg" alt="distribution icon">
-                <p>
-                    Excellence in every project
-                </p>
-            </div>
-            <div class="company-portfolio__card">
-                <img src="@/assets/images/value/promotion.svg" alt="employee development icon">
-                <p>
-                    Continuous employee development
-                </p>
-            </div>
-            </div>
-        </section>
+      <div class="bg">
+        <div class="section-container">
+            <header class="section__header">
+                <h3>
+                    These four principles govern the way we do business:
+                </h3>
+            </header>
+            <section class="business__principles">
+                <div class="business-principles__block">
+                    <div class="business-principles__image">
+                        <img src="@/assets/images/value/value-creation.png" alt="value creation icon">
+                    </div>
+                    <div>
+                        <h3>
+                            Distinctive value creation
+                        </h3>
+                    </div>
+                </div>
+                <div class="business-principles__block">
+                    <div>
+                        <h3>
+                            Priority on customer success
+                        </h3>
+                    </div>
+                    <div class="business-principles__image">
+                        <img src="@/assets/images/value/customer-success.png" alt="satisfaction icon">
+                    </div>
+                </div>
+                <div class="business-principles__block">
+                    <div class="business-principles__image">
+                        <img src="@/assets/images/value/excellence.jpg" alt="distribution icon">
+                    </div>
+                    <div>
+                        <h3>
+                            Excellence in every project
+                        </h3>
+                    </div>
+                </div>
+                <div class="business-principles__block">
+                    <div>
+                        <h3>
+                            Continuous employee development
+                        </h3>
+                    </div>
+                    <div class="business-principles__image">
+                        <img src="@/assets/images/value/employee-development.png" alt="employee development icon">
+                    </div>
+                </div>
+            </section>
+        </div>
       </div>
   </section>
 </template>
@@ -62,27 +78,6 @@ export default {
     .section__header h3 {
         font-weight: 600;
     }
-    .company-portfolio__card {
-        overflow: hidden;
-        padding: 3rem 0 2rem;
-        width: 25rem;
-        margin: 0 auto;
-        text-align: center;
-        z-index: 9;
-        background: var(--semanticOne);
-        box-shadow: 0px 1px 6px rgb(0 0 0 / 8%);
-        border-radius: 6px;
-        margin-bottom: 2rem;
-    }
-    .company-portfolio__card img {
-        width: 10rem;
-        border-radius: 4px;
-        filter: drop-shadow(0 0 0.4rem #c9c8c8);
-    }
-    .company-portfolio__card h4 {
-        text-align: left;
-        margin-top: 2rem;
-    }
     p {
         text-align: left;
         font-weight: 500;
@@ -92,9 +87,6 @@ export default {
         padding: 1.5rem;
     }
     @media screen and (min-width: 768px) {
-        .section {
-            height: 90vh;
-        }
         .business__principles {
             font-size: 3rem;
             color: var(--neutralOne);
@@ -103,10 +95,22 @@ export default {
             margin-top: 10rem;
             margin-bottom: 4rem;
         }
-        .company-portfolio {
+        .business-principles__block {
             display: flex;
+            margin: 0 auto 2rem;
+            max-width: 100rem;
+            align-items: center;
             justify-content: space-between;
-            margin: 6rem auto 0;
+        }
+        .business-principles__image {
+            width: 50%;
+            max-height: 33rem;
+            background-image: linear-gradient( 0deg,#fdfdfe,#f5f7fa);
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .business-principles__image img {
+            max-height: 33rem;
         }
     }
     @media screen and (max-width: 767px) {

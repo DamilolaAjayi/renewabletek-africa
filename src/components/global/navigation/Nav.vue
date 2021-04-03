@@ -2,7 +2,7 @@
   <div class="nav">
     <div class="nav-left">
       <div class="nav-logo">
-        <a href="#home" v-smooth-scroll="{ duration: 1000, offset: -70 }">
+        <a href="#homepage">
           <img src="@/assets/images/renewabletek-africa-full-logo-mx-sm.png" alt="RenewableTek Africa Logo" />
         </a>
       </div>

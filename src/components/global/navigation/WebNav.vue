@@ -1,8 +1,9 @@
 <template>
   <div class="web-nav">
-    <a href="#homepage" class="web-nav-link active" v-smooth-scroll="{ duration: 1000, offset: -50 }">Home</a>
-    <a href="#about" class="web-nav-link" v-smooth-scroll="{ duration: 1000, offset: -50 }">About</a>
-    <a href="#people" class="web-nav-link" v-smooth-scroll="{ duration: 1000, offset: -50 }">Contact</a>
+    <a href="#homepage" class="web-nav-link active">Home</a>
+    <a href="#services" class="web-nav-link">Services</a>
+    <a href="#about" class="web-nav-link">About</a>
+    <a href="#contact" class="web-nav-link">Contact</a>
   </div>
 </template>
 
@@ -30,7 +31,7 @@ export default {
   font-weight: 600;
   color: var(--neutralOne);
 }
-.web-nav-link:nth-child(-n + 2) {
+.web-nav-link:nth-child(-n + 3) {
   margin-right: 5rem;
 }
 .web-nav-link:hover {

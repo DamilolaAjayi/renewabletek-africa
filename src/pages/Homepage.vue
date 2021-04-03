@@ -3,33 +3,31 @@
     <div
       class="hero-page section-container"
     >
-      <div class="hero-page__textbox">
-        <div>
-          <h2>
-            Renewable Energy Consulting
-          </h2>
-          <transition
-            mode="out-in"
-            enter-active-class="animate__animated animate__fadeInLeft"
-          >
-            <div class="hero-page__brief" v-if="loadAnimation">
-              <ul>
-                <li>Engineering</li>
-                <li>Procurement</li>
-                <li>Construction</li>
-                <li>Maintenance</li>
-                <li>Training</li>
-                <li>Development of renewable energy assets across sub-saharan Africa</li>
-              </ul>
-            </div>
-          </transition>
-        </div>
-      </div>
-    </div>
-    <div class="homepage__footer">
-      <p>
-        RenewableTek Africa is led by a versatile group of individuals with deep experience in renewable energy and emerging markets.
+    <header>
+      <h2 class="hero-page__title">
+        Renewable Energy Consulting Firm
+      </h2>
+      <p class="hero-page__subtitle">
+      RenewableTek is committed to providing clean and sustainable solutions that will close the power gap that exists within sub-saharan Africa.
       </p>
+    </header>
+      <div class="hero-page__textbox">
+        <transition
+          mode="out-in"
+          enter-active-class="animate__animated animate__fadeInLeft"
+        >
+          <div class="hero-page__brief" v-if="loadAnimation">
+            <ul>
+              <li>Engineering</li>
+              <li>Procurement</li>
+              <li>Construction</li>
+              <li>Maintenance</li>
+              <li>Training</li>
+              <li>Development of renewable energy assets across sub-saharan Africa</li>
+            </ul>
+          </div>
+        </transition>
+      </div>
     </div>
   </section>
 </template>
@@ -105,16 +103,25 @@ export default {
 }
 @media screen and (min-width: 768px) {
   .hero-page {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 100vh;
+    max-width: 144rem;
+    margin: 0 auto;
     min-height: 50rem;
     padding-bottom: 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-image:
     linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(255, 255, 255, 0.73)), url(https://ik.imagekit.io/7dkc9ii1v1r/solar-panel-cell-dramatic-sunset-sky-background-clean-alternative-power-energy-concept-min_RcVKg15PY.jpg);
+  }
+  header {
+    padding: 10rem 0 3rem;
+  }
+  .hero-page__title {
+    width: max-content;
+    padding: 2rem 0;
+  }
+  .hero-page__subtitle {
+    max-width: 50%;
   }
   .hero-page__carousel-parent {
     width: 50%;

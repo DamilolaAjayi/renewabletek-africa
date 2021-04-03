@@ -11,10 +11,21 @@
       <div class="footer__column">
         <p class="footer-about__header">COMPANY</p>
         <ul>
-          <li>Careers</li>
-          <li>About</li>
-          <li>Press &amp; Media</li>
-          <li>Careers</li>
+          <li>
+            <a href="">
+              Careers
+            </a>
+          </li>
+          <li>
+            <a href="">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Press &amp; Media
+            </a>
+          </li>
         </ul>
       </div>
       <div class="footer__column">
@@ -26,7 +37,7 @@
           >info@renewabletek.africa</a
         >
         <a href="tel:+234-901-474-5515" class="footer-contact__mobile"
-          >+234 xxx xxx xxxx</a
+          >+234 816 967 9594</a
         >
       </div>
     </section>
@@ -50,7 +61,7 @@ export default {
 
 <style scoped>
 .footer {
-  padding: 8rem 1.5rem;
+  padding: 3rem 1.5rem 6rem;
 }
 .footer__main {
   padding-bottom: 1.5rem;
@@ -65,19 +76,24 @@ export default {
 }
 .footer__column {
   text-align: left;
+  padding: 2rem 0;
 }
 .footer__column:nth-child(n + 1) {
   margin-top: 1rem;
 }
 .footer-contact__header {
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 .footer-about__header {
-  font-weight: 700;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.footer__column li {
+  padding: 0.5rem 0;
 }
 .logo {
-  height: 9rem;
+  height: 6.5rem;
   width: auto;
 }
 a {
@@ -92,6 +108,7 @@ a:hover {
     width: auto;
   }
   .footer {
+    padding: 8rem 1.5rem;
     text-align: center;
   }
   .footer__main {
@@ -99,6 +116,9 @@ a:hover {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+  }
+  .footer__column:nth-child(n + 1) {
+    margin-top: 1rem;
   }
 }
 

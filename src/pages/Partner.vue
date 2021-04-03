@@ -1,29 +1,31 @@
 <template>
   <section id="partner" class="section">
-    <div class="partner__textbox">
-      <p>
-        We partner with our clients to support the 
-      <span class="hightlight">safe and efficient production</span>,
-      <span class="hightlight">delivery</span>,&nbsp;and&nbsp;
-      <span class="hightlight">use of renewable energy</span>.
-      </p>
-      <p>
-        RenewableTek is committed to providing clean and sustainable solutions that will close the power gap that exists within sub-saharan Africa.
-      </p>
-    </div>
-    <div class="hero-page__carousel-parent">
-      <transition
-        mode="out-in"
-        enter-active-class="animate__animated animate__fadeIn"
-      >
-        <div
-          class="hero-page__carousel"
+    <div class="bg">
+      <div class="partner__textbox">
+        <p>
+          We partner with our clients to support the 
+        <span class="hightlight">safe and efficient production</span>,
+        <span class="hightlight">delivery</span>,&nbsp;and&nbsp;
+        <span class="hightlight">use of renewable energy</span>.
+        </p>
+        <p>
+          We seek to foster a positive and innovative culture which we carry into our projects and give our clients powerful solutions.  
+        </p>
+      </div>
+      <div class="hero-page__carousel-parent">
+        <transition
+          mode="out-in"
+          enter-active-class="animate__animated animate__fadeIn"
         >
-          <div class="solar-illustration">
-            <img src="@/assets/images/renewable-project.png" alt="renewable energy company">
+          <div
+            class="hero-page__carousel"
+          >
+            <div class="solar-illustration">
+              <img src="@/assets/images/renewable-project.png" alt="renewable energy company">
+            </div>
           </div>
-        </div>
-      </transition>
+        </transition>
+      </div>
     </div>
   </section>
 </template>
@@ -35,6 +37,9 @@ export default {
 </script>
 
 <style scoped>
+.section {
+  background: var(--neutralFour);
+}
 .partner__textbox p:last-of-type {
   padding: 4rem 0;
 }
@@ -45,8 +50,11 @@ export default {
   width: 100%;
   margin: 0;
 }
+.solar-illustration img {
+  filter: drop-shadow(0 1rem 1rem #c9c8c8);
+}
   @media screen and (min-width: 768px) {
-    .section {
+    .bg {
       display: flex;
       padding: 6rem 6%;
       align-items: center;
