@@ -12,19 +12,13 @@
         <p class="footer-about__header">COMPANY</p>
         <ul>
           <li>
-            <a href="">
-              Careers
-            </a>
+            <a href=""> Careers </a>
           </li>
           <li>
-            <a href="">
-              About
-            </a>
+            <a href=""> About </a>
           </li>
           <li>
-            <a href="">
-              Press &amp; Media
-            </a>
+            <a href=""> Press &amp; Media </a>
           </li>
         </ul>
       </div>

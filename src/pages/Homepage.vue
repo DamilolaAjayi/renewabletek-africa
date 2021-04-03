@@ -1,16 +1,13 @@
 <template>
   <section id="homepage" class="section">
-    <div
-      class="hero-page section-container"
-    >
-    <header>
-      <h2 class="hero-page__title">
-        Renewable Energy Consulting Firm
-      </h2>
-      <p class="hero-page__subtitle">
-      RenewableTek is committed to providing clean and sustainable solutions that will close the power gap that exists within sub-saharan Africa.
-      </p>
-    </header>
+    <div class="hero-page section-container">
+      <header>
+        <h2 class="hero-page__title">Renewable Energy Consulting Firm</h2>
+        <p class="hero-page__subtitle">
+          RenewableTek is committed to providing clean and sustainable solutions
+          that will close the power gap that exists within sub-saharan Africa.
+        </p>
+      </header>
       <div class="hero-page__textbox">
         <transition
           mode="out-in"
@@ -23,7 +20,9 @@
               <li>Construction</li>
               <li>Maintenance</li>
               <li>Training</li>
-              <li>Development of renewable energy assets across sub-saharan Africa</li>
+              <li>
+                Development of renewable energy assets across sub-saharan Africa
+              </li>
             </ul>
           </div>
         </transition>
@@ -51,7 +50,7 @@ export default {
   font-size: 1.8rem;
 }
 .hero-page__brief li::before {
-  content: '-';
+  content: "-";
   translate: 0.3s;
   margin-right: 5px;
 }
@@ -94,8 +93,7 @@ export default {
 .homepage__footer {
   background: var(--semanticFour);
   padding: 3rem 6%;
-  box-shadow: 5px 
-  0px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.1);
 }
 .homepage__footer p {
   font-weight: 500;
@@ -110,8 +108,12 @@ export default {
     padding-bottom: 0;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image:
-    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(255, 255, 255, 0.73)), url(https://ik.imagekit.io/7dkc9ii1v1r/solar-panel-cell-dramatic-sunset-sky-background-clean-alternative-power-energy-concept-min_RcVKg15PY.jpg);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(245, 246, 252, 0.52),
+        rgba(255, 255, 255, 0.73)
+      ),
+      url(https://ik.imagekit.io/7dkc9ii1v1r/solar-panel-cell-dramatic-sunset-sky-background-clean-alternative-power-energy-concept-min_RcVKg15PY.jpg);
   }
   header {
     padding: 10rem 0 3rem;
