@@ -2,7 +2,7 @@
   <div class="web-nav">
     <a href="#homepage" class="web-nav-link active">Home</a>
     <a href="#services" class="web-nav-link">Services</a>
-    <a href="#about" class="web-nav-link">About</a>
+    <router-link :to="{name: 'About'}" :class="'web-nav-link'">About</router-link>
     <a href="#contact" class="web-nav-link">Contact</a>
   </div>
 </template>

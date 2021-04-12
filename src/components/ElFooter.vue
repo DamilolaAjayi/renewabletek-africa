@@ -29,7 +29,7 @@
         <p class="footer-contact__header">CONTACT US</p>
         <a
           target="_blank"
-          :href="`mailto:info@spaces.io`"
+          :href="`mailto:info@renewabletekafrica.com`"
           class="footer-contact__email"
           >info@renewabletekafrica.com</a
         >
