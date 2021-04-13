@@ -3,7 +3,7 @@
     <a href="#homepage" class="web-nav-link active">Home</a>
     <a href="#services" class="web-nav-link">Services</a>
     <router-link :to="{name: 'About'}" :class="'web-nav-link'">About</router-link>
-    <a href="#contact" class="web-nav-link">Contact</a>
+    <a href="#footer" class="web-nav-link">Contact</a>
   </div>
 </template>
 

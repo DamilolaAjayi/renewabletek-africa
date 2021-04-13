@@ -42,11 +42,9 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 767px) {
     .company--profile {
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 1.5em;
+        margin: 14rem 2rem 0;
     }
 }
 .company--profile--about__header {
@@ -65,6 +63,7 @@ export default {
     margin: 0 0 2em 0;
     font-size: 2rem;
     line-height: 1.6;
+    font-weight: 300;
 }
 @media screen and (max-width: 767px) {
     .company--profile--about__paragraph {
@@ -86,16 +85,19 @@ export default {
     margin: 0 0 2em 0;
     font-size: 2rem;
     line-height: 1.6;
+    font-weight: 300;
 }
 @media screen and (max-width: 767px) {
     .company--profile--values__paragraph {
         font-size: 1.2rem;
     }
 }
-.company--profile {
-  font-weight: 300;
-  margin-left: 8%;
-  width: 70%;
-  margin-top: 14rem;
+@media screen and (min-width: 768px) {
+ .company--profile {
+    font-weight: 300;
+    margin-left: 8%;
+    width: 70%;
+    margin-top: 14rem;
+  } 
 }
 </style>

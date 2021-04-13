@@ -15,10 +15,7 @@
         <p class="footer-about__header">COMPANY</p>
         <ul>
           <li>
-            <a href=""> Careers </a>
-          </li>
-          <li>
-            <a href=""> About </a>
+            <router-link :to="{name: 'About'}" :class="'web-nav-link'">About</router-link>
           </li>
           <li>
             <a href=""> Press &amp; Media </a>
@@ -31,10 +28,19 @@
           target="_blank"
           :href="`mailto:info@renewabletekafrica.com`"
           class="footer-contact__email"
-          >info@renewabletekafrica.com</a
+          >
+          <span>
+            <img src="@/assets/images/email-icon.png" alt="">
+          </span>
+          info@renewabletekafrica.com
+          </a
         >
         <a href="tel:+234-901-474-5515" class="footer-contact__mobile"
-          >+234 816 967 9594</a
+          >
+          <span>
+            <img src="@/assets/images/phone-icon.png" alt="">
+          </span>
+          +234 816 967 9594</a
         >
       </div>
     </section>
@@ -95,6 +101,10 @@ a {
 }
 a:hover {
   color: var(--primaryOne);
+}
+.second img {
+  width: 2rem;
+  filter: invert(90%) sepia(16%) saturate(1927%) hue-rotate(321deg) brightness(101%) contrast(101%);
 }
 @media screen and (min-width: 768px) {
   .logo {

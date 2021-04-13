@@ -9,6 +9,13 @@
             </div>
             <div>
               <p>Engineering</p>
+              <div class="service-list">
+                <ul>
+                  <li>- Field audit and electrification verification</li>
+                  <li>- Conceptual and Detailed Design</li>
+                  <li>- Engineering Studies and Calculations</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="service-card">
@@ -17,6 +24,13 @@
             </div>
             <div>
               <p>Procurement</p>
+              <div class="service-list">
+                <ul>
+                  <li>- Equipment selection</li>
+                  <li>- Vendor selection</li>
+                  <li>- Equipment and material procurement</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="service-card">
@@ -25,14 +39,33 @@
             </div>
             <div>
               <p>Construction</p>
+              <div class="service-list">
+                <ul>
+                  <li>- Project and Construction Management</li>
+                  <li>- Field engineering services</li>
+                  <li>- Installation and Commissioning</li>
+                  <li>- Quality Assurance/Quality Control</li>
+                  <li>- Metering</li>
+                </ul>
+              </div>
             </div>
           </div>
+        </section>
+        <section class="services-two">
           <div class="service-card">
             <div class="service-card__image">
               <maintenance-icon />
             </div>
             <div>
-              <p>Maintenance</p>
+              <p>Post Installation Support/Maintenance</p>
+              <div class="service-list">
+                <ul>
+                  <li>- Preventative and Corrective Maintenance</li>
+                  <li>- Remote monitoring, control and reporting</li>
+                  <li>- Repairs and Inspections</li>
+                  <li>- Warranty Administration</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="service-card">
@@ -40,17 +73,16 @@
               <training-icon />
             </div>
             <div>
-              <p>Training</p>
+              <p>Talent Hub - Recruitment and Training</p>
+              <div class="service-list">
+                <ul>
+                  <li>- <b>Talent Sourcing</b> - Contract, Short Term and Permanent roles</li>
+                  <li>- Talent Assessment</li>
+                  <li>- Technical and Non-technical training</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <!-- <div class="service-card">
-            <div>
-              <img src="" alt="">
-            </div>
-            <div>
-              <p>Development of renewable energy assets across sub-saharan Africa</p>
-            </div>
-          </div> -->
         </section>
     </div>
   </section>
@@ -84,19 +116,17 @@ export default {
 }
 .service-card {
   text-align: center;
-  padding: 2rem 2rem 0.5rem;
+  padding: 2rem;
   width: 25rem;
-  border-radius: 9px;
   margin: 1.5rem auto;
-  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: rgba(118, 120, 142, 0.05);
 }
 p {
-  opacity: 0.7;
+  font-weight: 600;
   padding: 2rem 0 1rem;
 }
 .service-card__image {
-  width: 15rem;
+  width: 8rem;
   margin: 0 auto;
 }
 .section__header {
@@ -114,21 +144,32 @@ p {
       padding-bottom: 4rem;
     }
     .service-card {
-      width: 20rem;
-      box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
+      width: auto;
+      /* box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2); */
     }
     .services {
       display: grid;
-      grid-template-columns: auto auto auto auto auto;
+      grid-template-columns: auto auto auto;
       grid-column-gap: 50px;
       grid-row-gap: 50px;
     }
+    .services-two {
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+      margin-top: 3rem;
+    }
     .service-card__image {
-      max-width: 15rem;
+      max-width: 8rem;
     }
     .service-card__image svg {
       max-width: 100%;
       height: auto;
+    }
+    .service-list {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      font-weight: 300;
     }
   }
 </style>

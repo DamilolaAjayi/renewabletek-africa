@@ -3,8 +3,8 @@
     <div class="nav-dropdown__list">
       <a href="#homepage" class="nav-link" @click="hideNavBody">Home</a>
       <a href="#services" class="nav-link" @click="hideNavBody">Services</a>
-      <a href="#about" class="nav-link" @click="hideNavBody">About</a>
-      <a href="#contact" class="nav-link" @click="hideNavBody">Contact</a>
+      <router-link :to="{name: 'About'}" :class="'nav-link'" @click="hideNavBody">About</router-link>
+      <a href="#footer" class="nav-link" @click="hideNavBody">Contact</a>
     </div>
   </div>
 </template>
