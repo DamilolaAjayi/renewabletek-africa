@@ -100,6 +100,7 @@ export default {
 }
 a {
   display: block;
+  font-weight: 300;
 }
 a:hover {
   color: var(--primaryOne);
@@ -151,7 +152,6 @@ a:hover {
   }
   a {
     font-size: 1.5rem;
-    font-weight: 400;
   }
 }
 </style>
