@@ -14,19 +14,15 @@
         </p>
       </div>
       <div class="hero-page__carousel-parent">
-        <transition
-          mode="out-in"
-          enter-active-class="animate__animated animate__fadeIn"
-        >
-          <div class="hero-page__carousel">
-            <div class="solar-illustration">
-              <img
-                src="@/assets/images/renewable-project.png"
-                alt="renewable energy company"
-              />
-            </div>
+        <div class="hero-page__carousel">
+          <div class="solar-illustration">
+            <img
+              src="@/assets/images/renewable-project.png"
+              loading="lazy"
+              alt="renewable energy company"
+            />
           </div>
-        </transition>
+        </div>
       </div>
     </div>
   </section>
@@ -40,7 +36,7 @@ export default {
 
 <style scoped>
 .section {
-  background: var(--neutralFour);
+  background-image: linear-gradient(0deg, #fdfdfe, #f5f7fa);
   padding: 3rem 2rem;
 }
 .partner__textbox p:last-of-type {

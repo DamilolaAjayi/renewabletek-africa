@@ -136,6 +136,10 @@ p {
   max-width: 100%;
   height: auto;
 }
+.service-list {
+  line-height: 2rem;
+  font-weight: 300;
+}
   @media screen and (min-width: 768px) {
     .bg {
       padding: 6rem 6%;
@@ -145,7 +149,6 @@ p {
     }
     .service-card {
       width: auto;
-      /* box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2); */
     }
     .services {
       display: grid;
@@ -168,8 +171,6 @@ p {
     }
     .service-list {
       font-size: 1.4rem;
-      line-height: 2rem;
-      font-weight: 300;
     }
   }
 </style>

@@ -24,24 +24,26 @@
       </div>
       <div class="footer__column second">
         <p class="footer-contact__header">CONTACT US</p>
-        <a
-          target="_blank"
-          :href="`mailto:info@renewabletekafrica.com`"
-          class="footer-contact__email"
-          >
+        <div class="footer-contact__email">
           <span>
             <img src="@/assets/images/email-icon.png" alt="">
           </span>
-          info@renewabletekafrica.com
-          </a
-        >
-        <a href="tel:+234-901-474-5515" class="footer-contact__mobile"
-          >
+          <a
+            target="_blank"
+            :href="`mailto:info@renewabletekafrica.com`"
+            >
+            info@renewabletekafrica.com
+          </a>
+        </div>
+        <div class="footer-contact__mobile">
           <span>
             <img src="@/assets/images/phone-icon.png" alt="">
           </span>
-          +234 816 967 9594</a
-        >
+          <a href="tel:+234-901-474-5515"
+            >
+            +234 816 967 9594
+          </a>
+        </div>
       </div>
     </section>
   </footer>
@@ -130,6 +132,11 @@ a:hover {
 .footer-contact__email,
 .footer-contact__mobile {
   margin-top: 1rem;
+  display: flex;
+}
+.footer-contact__email span,
+.footer-contact__mobile span {
+  margin-right: 1rem;
 }
 @media screen and (max-width: 767px) {
   .footer__main {
