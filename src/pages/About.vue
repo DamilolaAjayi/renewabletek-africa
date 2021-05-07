@@ -29,19 +29,27 @@
         </section>
       </div>
     </main>
+    <el-footer />
   </div>
 </template>
 
 <script>
 import Navigation from '@/components/global/navigation/Nav';
+import ElFooter from '@/components/ElFooter';
 
 export default {
   name: 'about',
-  components: { Navigation },
+  components: {
+    Navigation,
+    ElFooter,
+  },
 };
 </script>
 
 <style scoped>
+main {
+  min-height: 100vh;
+}
 @media screen and (max-width: 767px) {
     .company--profile {
         margin: 14rem 2rem 0;
