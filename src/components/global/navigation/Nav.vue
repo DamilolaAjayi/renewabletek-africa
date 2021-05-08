@@ -2,12 +2,12 @@
   <div class="nav">
     <div class="nav-left">
       <div class="nav-logo">
-        <a href="#homepage">
+        <a href="#homepage" @click="directToHomepage">
           <img src="@/assets/images/renewabletek-africa-full-logo-mx-sm.png" alt="RenewableTek Africa Logo" />
         </a>
       </div>
     </div>
-    <div class="nav-right">
+    <div class="nav-right" v-if="view !== '/about'">
       <div class="nav-content">
         <div class="mobile-nav" v-if="isMobile">
           <img
@@ -49,10 +49,12 @@ export default {
     return {
       showMobileNav: false,
       menuClicked: false,
-      view: {
-        atTopOfPage: true,
-      },
     };
+  },
+  computed: {
+    view() {
+      return this.$route.path;
+    }
   },
   methods: {
     closeMobileNav() {
@@ -62,6 +64,11 @@ export default {
     toggleMenu() {
       this.showMobileNav = !this.showMobileNav;
       this.menuClicked = !this.menuClicked;
+    },
+    directToHomepage() {
+      this.$router.push({
+        name: 'Home',
+      });
     },
   },
 };
