@@ -8,7 +8,8 @@
           alt="RenewableTek Africa logo"
         />
         <section class="footer__copyright">
-          <p>&#169; {{ currentYear }} RenewableTek Africa | All Rights Reserved</p>
+          <p>All Rights Reserved</p>
+          <p>&#169; RenewableTek Africa, {{ currentYear }}</p>
         </section>
       </div>
       <div class="footer__column second">
@@ -19,6 +20,9 @@
           </li>
           <li>
             <a href=""> Press &amp; Media </a>
+          </li>
+          <li>
+            <router-link :to="{name: 'PrivacyPolicy'}" :class="'web-nav-link'">Privacy policy</router-link>
           </li>
         </ul>
       </div>
