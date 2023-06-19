@@ -1,16 +1,16 @@
 <template>
-  <div class="nav" :class="{ 'nav-scrolled': !view.atTopOfPage }">
+  <div class="nav">
     <div class="nav-left">
       <div class="nav-logo">
-        <a href="#home" v-smooth-scroll="{ duration: 1000, offset: -70 }">
-          <img src="@/assets/images/renewabletek-africa-monochrome-full-logo-sm.png" alt="RenewableTek Africa Logo" />
+        <a href="#homepage" @click="directToHomepage">
+          <img src="@/assets/images/renewabletek-africa-full-logo-mx-sm.png" alt="RenewableTek Africa Logo" />
         </a>
       </div>
     </div>
-    <div class="nav-right">
+    <div class="nav-right" v-if="view !== '/about'">
       <div class="nav-content">
         <div class="mobile-nav" v-if="isMobile">
-          <!-- <img
+          <img
             v-if="!menuClicked"
             src="@/assets/menu.svg"
             @click="toggleMenu"
@@ -22,7 +22,7 @@
             src="@/assets/close-button.svg"
             @click="toggleMenu"
             alt="Close Icon"
-          /> -->
+          />
           <mobile-nav v-if="showMobileNav" @closeMobileNav="closeMobileNav"/>
         </div>
         <div class="nav-web" v-else>
@@ -49,29 +49,26 @@ export default {
     return {
       showMobileNav: false,
       menuClicked: false,
-      view: {
-        atTopOfPage: true,
-      },
     };
   },
-  beforeMount() {
-    window.addEventListener("scroll", this.handleScroll);
+  computed: {
+    view() {
+      return this.$route.path;
+    }
   },
   methods: {
     closeMobileNav() {
       this.showMobileNav = false;
       this.menuClicked = false;
     },
-    handleScroll() {
-      if (window.pageYOffset > 0) {
-        if (this.view.atTopOfPage) this.view.atTopOfPage = false;
-      } else {
-        if (!this.view.atTopOfPage) this.view.atTopOfPage = true;
-      }
-    },
     toggleMenu() {
       this.showMobileNav = !this.showMobileNav;
       this.menuClicked = !this.menuClicked;
+    },
+    directToHomepage() {
+      this.$router.push({
+        name: 'Home',
+      });
     },
   },
 };
@@ -86,10 +83,9 @@ export default {
   font-weight: 500;
   z-index: 10;
   padding: 2rem 6%;
-  background: var(--neutralOne);
+  background: rgba(255,255,255,0.95);
 }
 .nav-logo img {
-  height: 6.5rem;
   width: auto;
 }
 .nav-left,
@@ -105,11 +101,6 @@ export default {
 .nav-right {
   justify-content: flex-end;
   width: 50%;
-}
-.nav-scrolled {
-  transition: transform 0.5s;
-  box-shadow: 0px 
-  0px 10px rgba(0, 0, 0, 0.1);
 }
 .nav-content {
   width: inherit;

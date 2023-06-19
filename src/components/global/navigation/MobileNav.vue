@@ -1,10 +1,10 @@
 <template>
   <div class="nav__dropdown">
     <div class="nav-dropdown__list">
-      <a href="#products" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 300 }">Products</a>
-      <a href="#purpose" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 300 }">Purpose</a>
-      <a href="#people" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 300 }">People</a>
-      <a href="#partner" class="nav-link" @click="hideNavBody" v-smooth-scroll="{ duration: 300 }">Partner</a>
+      <a href="#homepage" class="nav-link" @click="hideNavBody">Home</a>
+      <a href="#services" class="nav-link" @click="hideNavBody">Services</a>
+      <router-link :to="{name: 'About'}" :class="'nav-link'" @click="hideNavBody">About</router-link>
+      <a href="#footer" class="nav-link" @click="hideNavBody">Contact</a>
     </div>
   </div>
 </template>
@@ -39,7 +39,7 @@ export default {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   right: 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 1rem;
 }
 </style>
